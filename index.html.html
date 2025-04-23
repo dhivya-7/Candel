@@ -1,0 +1,92 @@
+<!DCOTYPE html>
+<html>
+<head>
+<title>Candle</title>
+<style>
+*{
+margin:0px;
+padding:0px;
+background-color:black;
+}
+.container{
+background-color:black;
+width:100%;
+height:100vh;
+}
+.candel{
+position: absolute;
+height:350px;
+width:70px;
+background:linear-gradient(orange,darkorange,sienna, saddlebrown,rgb(0,0,0,0.4)90%);
+bottom:10px;
+left:600px;
+}
+.candel:before{
+content:'';
+position:absolute;
+}
+
+.candel:after{
+content:'';
+position:absolute;
+top:-25px;
+height:60px;
+width:100%;
+border-radius:50%;
+background:radial-gradient(sienna, orange, darkorange, saddlebrown);
+transform:rotateX(60deg);
+box-shadow: insert 5px 5px 5px rgba(0,0,0,0.2),
+insert -5px -5px 5px rgba(0,0,0,0.2);
+}
+.thread{
+width:5px;
+height:35px;
+position:absolute;
+top:-25px;
+left:31px;
+background:linear-gradient(blue 2%,black 80%,orange 92%);
+border-radius:30px 30px 20px 20px;
+z-index:10;
+}
+.fire{
+position:absolute;
+width:22px;
+height:100px;
+background:linear-gradient(white 50%, orange,blue);
+box-shadow:70px -50px 100px orangered,
+70px -50px 100px orangered;
+border-radius: 40px 40px 30px 30px;
+top:-120px;
+left:22px;
+animation:move 1s linear infinite, rotate 2s linear infinite;
+}
+@keyframes move{
+0%{
+transform:rotateZ(1deg);
+}
+100%{
+transform:rotateZ(-1deg);
+}
+}
+@keyframes rotate{
+0%{
+top:-119px;
+left:21px;
+}
+100%{
+top:-121px;
+left:23px;
+}
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<div class="candel">
+<div class="thread"></div>
+<div class="fire">
+</div>
+</div>
+</body>
+</html>
